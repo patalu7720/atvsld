@@ -133,6 +133,7 @@ import Button from 'primevue/button';
 import DatePicker from 'primevue/datepicker';
 import InputText from 'primevue/inputtext';
 import Message from 'primevue/message';
+import { useToast } from 'primevue/usetoast';
 
 import LoadingOverlay from '../../components/LoadingOverlay.vue'
 import EmptyStateCard from '../../components/EmptyStateCard.vue'
@@ -144,6 +145,7 @@ const plant = ref('CC');
 const loadingContent = ref(false);
 const loadingSubmit = ref(false);
 const idUpdate = ref(null);
+const toast = useToast();
 
 const showImageDialog = ref(false);
 const selectedImage = ref(null);

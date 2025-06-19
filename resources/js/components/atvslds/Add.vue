@@ -9,10 +9,7 @@
                     <label :for="p.plant + 'add'">{{ p.plant_description }}</label>
                 </div>
             </div>
-            <div v-if="filteredAreas.length == 1" class="flex flex-col gap-2">
-                <label for="area">Khu vực : <span class="font-semibold text-lg">{{ filteredAreas[0].name }}</span></label>
-            </div>
-            <div v-else class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2">
                 <label for="area">Khu vực</label>
                 <Select v-model="initialValues.area" :options="filteredAreas" name="area" optionLabel="name"
                     optionValue="id" placeholder="Chọn khu vực" class="w-full" />

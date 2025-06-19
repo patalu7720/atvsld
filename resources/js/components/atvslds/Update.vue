@@ -135,10 +135,8 @@ const filteredAreas = computed(() => {
 });
 
 watch(filteredAreas, (newAreas) => {
-    if (newAreas.length > 0) {
+    if (!initialValues.value.area && newAreas.length > 0) {
         initialValues.value.area = newAreas[0].id;
-    } else {
-        initialValues.value.area = '';
     }
 });
 
